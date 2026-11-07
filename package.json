@@ -1,0 +1,12 @@
+{
+  "name": "ccp-website",
+  "version": "1.0.0",
+  "description": "Create Custom Parts Co. website with blog",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js && echo 'Build complete — open public/index.html'"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

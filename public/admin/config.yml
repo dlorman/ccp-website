@@ -1,0 +1,25 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/ccp-website
+  branch: main
+  base_url: https://YOUR_CLOUDFLARE_DOMAIN.pages.dev
+  auth_endpoint: /api/auth
+
+publish_mode: editorial_workflow
+
+media_folder: public/images
+public_folder: /images
+
+collections:
+  - name: blog
+    label: Blog Posts
+    folder: content/blog
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Description (for Google)", name: "description", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["3D printing", "Savannah TN"] }
+      - { label: "URL Slug", name: "slug", widget: "string", hint: "URL-friendly version of title, e.g. custom-tractor-parts" }
+      - { label: "Body", name: "body", widget: "markdown" }
